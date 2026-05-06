@@ -1,0 +1,201 @@
+{
+  "common": {
+    "search": "Поиск",
+    "addToCart": "В корзину",
+    "buyNow": "Купить сейчас",
+    "loading": "Загрузка...",
+    "error": "Произошла ошибка",
+    "retry": "Повторить",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "delete": "Удалить",
+    "edit": "Редактировать",
+    "back": "Назад",
+    "next": "Далее",
+    "previous": "Предыдущий",
+    "viewAll": "Смотреть все",
+    "showMore": "Показать больше",
+    "soum": "сум"
+  },
+  "nav": {
+    "home": "Главная",
+    "books": "Книги",
+    "authors": "Авторы",
+    "genres": "Жанры",
+    "collections": "Коллекции",
+    "about": "О нас",
+    "cart": "Корзина",
+    "wishlist": "Избранное",
+    "profile": "Профиль",
+    "orders": "Заказы",
+    "library": "Моя библиотека",
+    "login": "Войти",
+    "register": "Регистрация",
+    "logout": "Выйти"
+  },
+  "home": {
+    "hero": {
+      "title": "Путешествие в мир книг",
+      "subtitle": "Тысячи книг, авторов и жанров — всё в одном месте",
+      "searchPlaceholder": "Найти книгу, автора или жанр...",
+      "browseBooks": "Смотреть книги",
+      "exploreGenres": "Изучить жанры"
+    },
+    "sections": {
+      "genres": "Жанры",
+      "bestsellers": "Бестселлеры",
+      "newArrivals": "Новинки",
+      "collections": "Коллекции",
+      "featuredAuthors": "Избранные авторы",
+      "audioBooks": "Аудиокниги",
+      "testimonials": "Отзывы"
+    },
+    "newsletter": {
+      "title": "Узнавайте новости первыми",
+      "subtitle": "Получайте информацию о новых книгах и скидках",
+      "placeholder": "Ваш email",
+      "subscribe": "Подписаться"
+    }
+  },
+  "book": {
+    "outOfStock": "Нет в наличии",
+    "inStock": "В наличии: {count} шт.",
+    "format": {
+      "label": "Формат",
+      "paperback": "Бумажная книга",
+      "ebook": "Электронная книга",
+      "audio": "Аудиокнига"
+    },
+    "tabs": {
+      "description": "Описание",
+      "authors": "Авторы",
+      "reviews": "Отзывы",
+      "delivery": "Доставка"
+    },
+    "relatedBooks": "Похожие книги",
+    "frequentlyBoughtTogether": "Часто покупают вместе"
+  },
+  "cart": {
+    "empty": "Ваша корзина пуста",
+    "emptyCta": "Смотреть книги",
+    "browseBooks": "Смотреть книги",
+    "loading": "Загрузка...",
+    "title": "Корзина",
+    "summary": "Сводка",
+    "items": "Товары",
+    "clearCart": "Очистить корзину",
+    "subtotal": "Подытог",
+    "shipping": "Доставка",
+    "discount": "Скидка",
+    "total": "Итого",
+    "checkout": "Оформить заказ",
+    "promoCode": "Промокод",
+    "apply": "Применить"
+  },
+  "auth": {
+    "login": {
+      "title": "Войдите в свой аккаунт",
+      "email": "Email",
+      "password": "Пароль",
+      "forgotPassword": "Забыли пароль?",
+      "submit": "Войти",
+      "noAccount": "Нет аккаунта?",
+      "registerLink": "Зарегистрируйтесь"
+    },
+    "register": {
+      "title": "Создайте новый аккаунт",
+      "name": "Имя",
+      "email": "Email",
+      "password": "Пароль",
+      "confirmPassword": "Подтвердите пароль",
+      "submit": "Зарегистрироваться",
+      "hasAccount": "Уже есть аккаунт?",
+      "loginLink": "Войдите"
+    }
+  },
+  "footer": {
+    "rights": "Все права защищены",
+    "company": "Компания",
+    "help": "Помощь",
+    "legal": "Правовая информация",
+    "social": "Социальные сети"
+  },
+  "checkout": {
+    "title": "Оформление заказа",
+    "emptyCart": "Ваша корзина пуста",
+    "address": "Адрес доставки",
+    "region": "Область",
+    "district": "Район",
+    "street": "Улица",
+    "houseNumber": "Дом",
+    "apartment": "Квартира",
+    "deliveryMethod": "Способ доставки",
+    "courier": "Курьер",
+    "pickup": "Самовывоз",
+    "post": "Почта",
+    "paymentMethod": "Способ оплаты",
+    "click": "Click",
+    "payme": "Payme",
+    "cash": "Наличные",
+    "card": "Карта",
+    "orderSummary": "Сводка заказа",
+    "subtotal": "Подытог",
+    "deliveryFee": "Доставка",
+    "total": "Итого",
+    "placeOrder": "Оформить заказ"
+  },
+  "profile": {
+    "loginRequired": "Войдите, чтобы просмотреть профиль",
+    "login": "Войти",
+    "orders": "Заказы",
+    "wishlist": "Избранное",
+    "library": "Библиотека",
+    "addresses": "Адреса"
+  },
+  "about": {
+    "title": "О нас"
+  },
+  "books": {
+    "title": "Книги",
+    "loading": "Загрузка...",
+    "noResults": "Результаты не найдены",
+    "filters": "Фильтры",
+    "sort": "Сортировка",
+    "searchPlaceholder": "Поиск книги...",
+    "allGenres": "Все жанры",
+    "allAuthors": "Все авторы",
+    "browseBooks": "Смотреть книги"
+  },
+  "genres": {
+    "title": "Жанры",
+    "browseBooks": "Смотреть книги"
+  },
+  "collections": {
+    "title": "Коллекции",
+    "browseBooks": "Смотреть книги"
+  },
+  "authors": {
+    "title": "Авторы",
+    "books": "книг",
+    "browseBooks": "Смотреть книги"
+  },
+  "wishlist": {
+    "title": "Избранное",
+    "empty": "Список избранного пуст",
+    "browseBooks": "Смотреть книги",
+    "addToCart": "В корзину"
+  },
+  "orders": {
+    "title": "Заказы",
+    "empty": "Заказы не найдены",
+    "browseBooks": "Смотреть книги",
+    "details": "Детали"
+  },
+  "library": {
+    "title": "Моя библиотека",
+    "empty": "Ваша библиотека пуста",
+    "browseBooks": "Смотреть книги",
+    "read": "Читать",
+    "download": "Скачать"
+  }
+}

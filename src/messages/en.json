@@ -1,0 +1,201 @@
+{
+  "common": {
+    "search": "Search",
+    "addToCart": "Add to cart",
+    "buyNow": "Buy now",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "viewAll": "View all",
+    "showMore": "Show more",
+    "soum": "UZS"
+  },
+  "nav": {
+    "home": "Home",
+    "books": "Books",
+    "authors": "Authors",
+    "genres": "Genres",
+    "collections": "Collections",
+    "about": "About",
+    "cart": "Cart",
+    "wishlist": "Wishlist",
+    "profile": "Profile",
+    "orders": "Orders",
+    "library": "My Library",
+    "login": "Sign in",
+    "register": "Sign up",
+    "logout": "Sign out"
+  },
+  "home": {
+    "hero": {
+      "title": "A journey into the world of books",
+      "subtitle": "Thousands of books, authors and genres — all in one place",
+      "searchPlaceholder": "Search a book, author or genre...",
+      "browseBooks": "Browse books",
+      "exploreGenres": "Explore genres"
+    },
+    "sections": {
+      "genres": "Genres",
+      "bestsellers": "Bestsellers",
+      "newArrivals": "New arrivals",
+      "collections": "Curated collections",
+      "featuredAuthors": "Featured authors",
+      "audioBooks": "Audio books",
+      "testimonials": "What readers say"
+    },
+    "newsletter": {
+      "title": "Be the first to know",
+      "subtitle": "Get updates about new books and discounts",
+      "placeholder": "Your email",
+      "subscribe": "Subscribe"
+    }
+  },
+  "book": {
+    "outOfStock": "Out of stock",
+    "inStock": "In stock: {count}",
+    "format": {
+      "label": "Format",
+      "paperback": "Paperback",
+      "ebook": "eBook",
+      "audio": "Audiobook"
+    },
+    "tabs": {
+      "description": "Description",
+      "authors": "Authors",
+      "reviews": "Reviews",
+      "delivery": "Delivery"
+    },
+    "relatedBooks": "Related books",
+    "frequentlyBoughtTogether": "Frequently bought together"
+  },
+  "cart": {
+    "empty": "Your cart is empty",
+    "emptyCta": "Browse books",
+    "browseBooks": "Browse books",
+    "loading": "Loading...",
+    "title": "Cart",
+    "summary": "Summary",
+    "items": "Items",
+    "clearCart": "Clear cart",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "discount": "Discount",
+    "total": "Total",
+    "checkout": "Checkout",
+    "promoCode": "Promo code",
+    "apply": "Apply"
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in to your account",
+      "email": "Email",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Sign up"
+    },
+    "register": {
+      "title": "Create a new account",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "submit": "Sign up",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Sign in"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "company": "Company",
+    "help": "Help",
+    "legal": "Legal",
+    "social": "Social"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "emptyCart": "Your cart is empty",
+    "address": "Shipping address",
+    "region": "Region",
+    "district": "District",
+    "street": "Street",
+    "houseNumber": "House number",
+    "apartment": "Apartment",
+    "deliveryMethod": "Delivery method",
+    "courier": "Courier",
+    "pickup": "Pickup",
+    "post": "Post",
+    "paymentMethod": "Payment method",
+    "click": "Click",
+    "payme": "Payme",
+    "cash": "Cash",
+    "card": "Card",
+    "orderSummary": "Order summary",
+    "subtotal": "Subtotal",
+    "deliveryFee": "Delivery fee",
+    "total": "Total",
+    "placeOrder": "Place order"
+  },
+  "profile": {
+    "loginRequired": "Sign in to view your profile",
+    "login": "Sign in",
+    "orders": "Orders",
+    "wishlist": "Wishlist",
+    "library": "Library",
+    "addresses": "Addresses"
+  },
+  "about": {
+    "title": "About Us"
+  },
+  "books": {
+    "title": "Books",
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "filters": "Filters",
+    "sort": "Sort",
+    "searchPlaceholder": "Search books...",
+    "allGenres": "All genres",
+    "allAuthors": "All authors",
+    "browseBooks": "Browse books"
+  },
+  "genres": {
+    "title": "Genres",
+    "browseBooks": "Browse books"
+  },
+  "collections": {
+    "title": "Collections",
+    "browseBooks": "Browse books"
+  },
+  "authors": {
+    "title": "Authors",
+    "books": "books",
+    "browseBooks": "Browse books"
+  },
+  "wishlist": {
+    "title": "Wishlist",
+    "empty": "Your wishlist is empty",
+    "browseBooks": "Browse books",
+    "addToCart": "Add to cart"
+  },
+  "orders": {
+    "title": "Orders",
+    "empty": "No orders found",
+    "browseBooks": "Browse books",
+    "details": "Details"
+  },
+  "library": {
+    "title": "My Library",
+    "empty": "Your library is empty",
+    "browseBooks": "Browse books",
+    "read": "Read",
+    "download": "Download"
+  }
+}

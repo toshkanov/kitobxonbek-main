@@ -1,0 +1,201 @@
+{
+  "common": {
+    "search": "Qidirish",
+    "addToCart": "Savatga qo'shish",
+    "buyNow": "Hoziroq sotib olish",
+    "loading": "Yuklanmoqda...",
+    "error": "Xatolik yuz berdi",
+    "retry": "Qayta urinish",
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "delete": "O'chirish",
+    "edit": "Tahrirlash",
+    "back": "Orqaga",
+    "next": "Keyingi",
+    "previous": "Oldingi",
+    "viewAll": "Hammasini ko'rish",
+    "showMore": "Ko'proq ko'rsatish",
+    "soum": "so'm"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "books": "Kitoblar",
+    "authors": "Mualliflar",
+    "genres": "Janrlar",
+    "collections": "To'plamlar",
+    "about": "Biz haqimizda",
+    "cart": "Savat",
+    "wishlist": "Sevimlilar",
+    "profile": "Profil",
+    "orders": "Buyurtmalar",
+    "library": "Kutubxonam",
+    "login": "Kirish",
+    "register": "Ro'yxatdan o'tish",
+    "logout": "Chiqish"
+  },
+  "home": {
+    "hero": {
+      "title": "Kitoblar olamiga sayohat",
+      "subtitle": "Minglab kitoblar, mualliflar va janrlar — barchasi bir joyda",
+      "searchPlaceholder": "Kitob, muallif yoki janr qidirish...",
+      "browseBooks": "Kitoblarni ko'rish",
+      "exploreGenres": "Janrlarni o'rganish"
+    },
+    "sections": {
+      "genres": "Janrlar",
+      "bestsellers": "Eng ko'p sotilganlar",
+      "newArrivals": "Yangi kelganlar",
+      "collections": "Tanlangan to'plamlar",
+      "featuredAuthors": "Tanlangan mualliflar",
+      "audioBooks": "Audio kitoblar",
+      "testimonials": "Foydalanuvchilar fikri"
+    },
+    "newsletter": {
+      "title": "Yangiliklarni birinchi bo'lib oling",
+      "subtitle": "Yangi kitoblar va chegirmalar haqida xabar olib turing",
+      "placeholder": "Email manzilingiz",
+      "subscribe": "Obuna bo'lish"
+    }
+  },
+  "book": {
+    "outOfStock": "Mavjud emas",
+    "inStock": "Mavjud: {count} ta",
+    "format": {
+      "label": "Format",
+      "paperback": "Qog'oz kitob",
+      "ebook": "Elektron kitob",
+      "audio": "Audio kitob"
+    },
+    "tabs": {
+      "description": "Tavsif",
+      "authors": "Mualliflar",
+      "reviews": "Sharhlar",
+      "delivery": "Yetkazib berish"
+    },
+    "relatedBooks": "Shu kabi kitoblar",
+    "frequentlyBoughtTogether": "Birga sotib olinadi"
+  },
+  "cart": {
+    "empty": "Savatingiz bo'sh",
+    "emptyCta": "Kitoblarni ko'rish",
+    "browseBooks": "Kitoblarni ko'rish",
+    "loading": "Yuklanmoqda...",
+    "title": "Savat",
+    "summary": "Xulosa",
+    "items": "Mahsulotlar",
+    "clearCart": "Savatni tozalash",
+    "subtotal": "Oraliq summa",
+    "shipping": "Yetkazib berish",
+    "discount": "Chegirma",
+    "total": "Jami",
+    "checkout": "Buyurtma berish",
+    "promoCode": "Promo-kod",
+    "apply": "Qo'llash"
+  },
+  "auth": {
+    "login": {
+      "title": "Hisobingizga kiring",
+      "email": "Email",
+      "password": "Parol",
+      "forgotPassword": "Parolni unutdingizmi?",
+      "submit": "Kirish",
+      "noAccount": "Hisobingiz yo'qmi?",
+      "registerLink": "Ro'yxatdan o'ting"
+    },
+    "register": {
+      "title": "Yangi hisob yarating",
+      "name": "Ism",
+      "email": "Email",
+      "password": "Parol",
+      "confirmPassword": "Parolni tasdiqlang",
+      "submit": "Ro'yxatdan o'tish",
+      "hasAccount": "Hisobingiz bormi?",
+      "loginLink": "Kiring"
+    }
+  },
+  "footer": {
+    "rights": "Barcha huquqlar himoyalangan",
+    "company": "Kompaniya",
+    "help": "Yordam",
+    "legal": "Huquqiy",
+    "social": "Ijtimoiy tarmoqlar"
+  },
+  "checkout": {
+    "title": "Buyurtma berish",
+    "emptyCart": "Savatingiz bo'sh",
+    "address": "Yetkazib berish manzili",
+    "region": "Viloyat",
+    "district": "Tuman",
+    "street": "Ko'cha",
+    "houseNumber": "Uy",
+    "apartment": "Xonadon",
+    "deliveryMethod": "Yetkazib berish usuli",
+    "courier": "Kuryer",
+    "pickup": "Olib ketish",
+    "post": "Pochta",
+    "paymentMethod": "To'lov usuli",
+    "click": "Click",
+    "payme": "Payme",
+    "cash": "Naqd pul",
+    "card": "Karta",
+    "orderSummary": "Buyurtma tafsilotlari",
+    "subtotal": "Oraliq summa",
+    "deliveryFee": "Yetkazib berish",
+    "total": "Jami",
+    "placeOrder": "Buyurtma berish"
+  },
+  "profile": {
+    "loginRequired": "Profilni ko'rish uchun tizimga kiring",
+    "login": "Kirish",
+    "orders": "Buyurtmalar",
+    "wishlist": "Sevimlilar",
+    "library": "Kutubxona",
+    "addresses": "Manzillar"
+  },
+  "about": {
+    "title": "Biz haqimizda"
+  },
+  "books": {
+    "title": "Kitoblar",
+    "loading": "Yuklanmoqda...",
+    "noResults": "Natijalar topilmadi",
+    "filters": "Filtrlar",
+    "sort": "Saralash",
+    "searchPlaceholder": "Kitob qidirish...",
+    "allGenres": "Barcha janrlar",
+    "allAuthors": "Barcha mualliflar",
+    "browseBooks": "Kitoblarni ko'rish"
+  },
+  "genres": {
+    "title": "Janrlar",
+    "browseBooks": "Kitoblarni ko'rish"
+  },
+  "collections": {
+    "title": "To'plamlar",
+    "browseBooks": "Kitoblarni ko'rish"
+  },
+  "authors": {
+    "title": "Mualliflar",
+    "books": "kitoblar",
+    "browseBooks": "Kitoblarni ko'rish"
+  },
+  "wishlist": {
+    "title": "Sevimlilar",
+    "empty": "Sevimlilar ro'yxati bo'sh",
+    "browseBooks": "Kitoblarni ko'rish",
+    "addToCart": "Savatga qo'shish"
+  },
+  "orders": {
+    "title": "Buyurtmalar",
+    "empty": "Buyurtmalar topilmadi",
+    "browseBooks": "Kitoblarni ko'rish",
+    "details": "Tafsilotlar"
+  },
+  "library": {
+    "title": "Kutubxonam",
+    "empty": "Kutubxonangiz bo'sh",
+    "browseBooks": "Kitoblarni ko'rish",
+    "read": "O'qish",
+    "download": "Yuklab olish"
+  }
+}
