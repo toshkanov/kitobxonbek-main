@@ -11,7 +11,7 @@ import {
   mergeCart as mergeCartApi,
   applyPromo as applyPromoApi,
 } from "@/lib/api/cart";
-import type { CartItemResponse, CartResponse, PromoResponse } from "@/lib/api/cart";
+import type { CartItemResponse, PromoResponse } from "@/lib/api/cart";
 import { toast } from "sonner";
 
 interface CartItem {

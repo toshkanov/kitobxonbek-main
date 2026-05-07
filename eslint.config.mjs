@@ -12,7 +12,17 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Project-specific ignores: skip Python backend and vendored JS.
+    "backend/**",
+    "node_modules/**",
+    "public/**",
   ]),
+  {
+    // O'zbek tilida apostroflar tabiiy — JSX ichida ham ruxsat berilsin.
+    rules: {
+      "react/no-unescaped-entities": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

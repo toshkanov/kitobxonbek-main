@@ -3,7 +3,6 @@ import { fetchBookBySlug, fetchRelatedBooks } from "@/lib/api/books";
 import { mapBackendBook } from "@/lib/mappers";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { RatingStars } from "@/components/shop/rating-stars";
 import { BookCard } from "@/components/shop/book-card";

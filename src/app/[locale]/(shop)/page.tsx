@@ -6,6 +6,7 @@ import { CollectionsSection } from "@/components/shop/collections-section";
 import { FeaturedAuthorsSection } from "@/components/shop/featured-authors";
 import { TestimonialsSection } from "@/components/shop/testimonials-section";
 import { NewsletterSection } from "@/components/shop/newsletter-section";
+import { NewsFeedItem, NewsFeedDivider } from "@/components/shop/news-feed";
 import { fetchBestsellers, fetchNewArrivals } from "@/lib/api/books";
 import { mapBackendBook } from "@/lib/mappers";
 
@@ -32,31 +33,65 @@ export default async function HomePage({
     bestsellers = bestsellersData.map(mapBackendBook);
     newArrivals = newArrivalsData.map(mapBackendBook);
   } catch {
-    // If API fails, render without books
+    // If API fails, render without books — sections that depend on data are skipped.
   }
 
   return (
-    <>
-      <HeroSection />
-      <GenresSection />
+    <div className="flex flex-col">
+      <NewsFeedItem index={0}>
+        <HeroSection />
+      </NewsFeedItem>
+
+      <NewsFeedDivider label="Janrlar" />
+      <NewsFeedItem index={1} kicker="Yo'nalishlar" badge="Top">
+        <GenresSection />
+      </NewsFeedItem>
+
       {bestsellers.length > 0 && (
-        <BookCarousel
-          books={bestsellers}
-          title={t("bestsellers")}
-          viewAllHref="/books?sort=popular"
-        />
+        <>
+          <NewsFeedDivider label="Bestseller" />
+          <NewsFeedItem index={2} kicker="Eng ko'p sotilganlar" badge="Hit">
+            <BookCarousel
+              books={bestsellers}
+              title={t("bestsellers")}
+              viewAllHref="/books?sort=popular"
+            />
+          </NewsFeedItem>
+        </>
       )}
+
       {newArrivals.length > 0 && (
-        <BookCarousel
-          books={newArrivals}
-          title={t("newArrivals")}
-          viewAllHref="/books?sort=newest"
-        />
+        <>
+          <NewsFeedDivider label="Yangi" />
+          <NewsFeedItem index={3} kicker="Endigina kelgan" badge="Yangi">
+            <BookCarousel
+              books={newArrivals}
+              title={t("newArrivals")}
+              viewAllHref="/books?sort=newest"
+            />
+          </NewsFeedItem>
+        </>
       )}
-      <CollectionsSection />
-      <FeaturedAuthorsSection />
-      <TestimonialsSection />
-      <NewsletterSection />
-    </>
+
+      <NewsFeedDivider label="To'plamlar" />
+      <NewsFeedItem index={4} kicker="Tematik tanlov">
+        <CollectionsSection />
+      </NewsFeedItem>
+
+      <NewsFeedDivider label="Mualliflar" />
+      <NewsFeedItem index={5} kicker="Tanlangan ovozlar">
+        <FeaturedAuthorsSection />
+      </NewsFeedItem>
+
+      <NewsFeedDivider label="Sharhlar" />
+      <NewsFeedItem index={6} kicker="O'quvchilar fikri">
+        <TestimonialsSection />
+      </NewsFeedItem>
+
+      <NewsFeedDivider label="Yangiliklar" />
+      <NewsFeedItem index={7} kicker="Aloqada qoling" badge="Newsletter">
+        <NewsletterSection />
+      </NewsFeedItem>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 import type { BackendBook, BackendAuthor, BackendGenre } from "@/lib/api/books";
-import type { Book, Author, Genre, BookFormatOption, BookFormat } from "@/types";
+import type { Book, Author, Genre, BookFormatOption } from "@/types";
 
 export function mapBackendAuthor(author: BackendAuthor): Author {
   return {

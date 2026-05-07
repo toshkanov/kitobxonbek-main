@@ -6,7 +6,6 @@ import { useCartStore } from "@/stores/cart";
 import { Link, useRouter } from "@/i18n/navigation";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
 import { formatPrice } from "@/lib/format";
 

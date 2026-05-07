@@ -1,7 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { getLibrary } from "@/lib/api/library";
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Download, BookOpen } from "lucide-react";
 

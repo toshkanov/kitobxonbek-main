@@ -1,10 +1,18 @@
-import createMiddleware from "next-intl/middleware";
+import createIntlMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { routing } from "@/i18n/routing";
 
-const intlMiddleware = createMiddleware(routing);
+const intlProxy = createIntlMiddleware(routing);
 
-const PROTECTED_SEGMENTS = ["/profile", "/orders", "/library", "/wishlist", "/addresses", "/notifications", "/settings"];
+const PROTECTED_SEGMENTS = [
+  "/profile",
+  "/orders",
+  "/library",
+  "/wishlist",
+  "/addresses",
+  "/notifications",
+  "/settings",
+];
 const ADMIN_SEGMENTS = ["/admin"];
 
 function stripLocale(pathname: string): string {
@@ -15,7 +23,7 @@ function stripLocale(pathname: string): string {
   return pathname;
 }
 
-export default function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const path = stripLocale(request.nextUrl.pathname);
   const accessToken = request.cookies.get("access_token")?.value;
 
@@ -28,8 +36,10 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
-  return intlMiddleware(request);
+  return intlProxy(request);
 }
+
+export default proxy;
 
 export const config = {
   matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],

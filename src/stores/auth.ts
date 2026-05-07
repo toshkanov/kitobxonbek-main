@@ -5,7 +5,6 @@ import type { UserResponse } from "@/lib/api/auth";
 import { login as loginApi, register as registerApi, logout as logoutApi, getMe } from "@/lib/api/auth";
 import { setAuthTokens, clearAuthTokens } from "@/lib/api";
 import { toast } from "sonner";
-import { useRouter } from "@/i18n/navigation";
 
 interface AuthState {
   user: UserResponse | null;

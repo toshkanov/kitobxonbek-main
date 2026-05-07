@@ -15,12 +15,17 @@ import {
   Users,
   Layers,
   Info,
+  LogIn,
+  UserPlus,
+  LogOut,
 } from "lucide-react";
 import { useCartStore } from "@/stores/cart";
+import { useAuthStore } from "@/stores/auth";
 import { cn } from "@/lib/utils";
 import { fetchGenres } from "@/lib/api/books";
 import type { BackendGenre } from "@/lib/api/books";
 import { GlassBadge } from "@/components/glass";
+import { Button } from "@/components/ui/button";
 
 interface MobileMenuProps {
   open: boolean;
@@ -246,6 +251,8 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const totalItems = useCartStore((s) => s.totalItems);
+  const user = useAuthStore((s) => s.user);
+  const logout = useAuthStore((s) => s.logout);
 
   const handleClose = useCallback(() => {
     onClose();
@@ -355,8 +362,43 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           </div>
         </div>
 
-        <div className="border-t border-border/50 px-4 py-3 text-xs text-muted-foreground text-center">
-          Kitobxon &copy; {new Date().getFullYear()}
+        <div className="border-t border-border/50 px-3 py-3 space-y-2">
+          {user ? (
+            <Button
+              variant="ghost"
+              className="text-destructive hover:text-destructive w-full justify-start gap-2"
+              onClick={async () => {
+                await logout();
+                handleClose();
+              }}
+            >
+              <LogOut className="size-4" />
+              {t("logout")}
+            </Button>
+          ) : (
+            <div className="grid grid-cols-2 gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                render={<Link href="/login" onClick={handleClose} />}
+                className="gap-1.5"
+              >
+                <LogIn className="size-4" />
+                {t("login")}
+              </Button>
+              <Button
+                size="sm"
+                render={<Link href="/register" onClick={handleClose} />}
+                className="gap-1.5"
+              >
+                <UserPlus className="size-4" />
+                {t("register")}
+              </Button>
+            </div>
+          )}
+          <p className="text-muted-foreground text-center text-xs">
+            Kitobxon &copy; {new Date().getFullYear()}
+          </p>
         </div>
       </div>
     </div>

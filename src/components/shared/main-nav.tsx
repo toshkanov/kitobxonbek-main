@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { ChevronDown, BookOpen, Users, Layers, Info } from "lucide-react";
+import { BookOpen, Info } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { fetchGenres } from "@/lib/api/books";
 import type { BackendGenre } from "@/lib/api/books";
