@@ -34,7 +34,10 @@ def get_bestsellers():
 
 
 def get_new_arrivals():
-    return get_books_queryset().filter(is_new=True).order_by("-created_at")[:20]
+    # Frontend expects this endpoint to show the newest books.
+    # Don't require the admin-only `is_new` flag, otherwise newly added
+    # books won't appear until manually marked.
+    return get_books_queryset().order_by("-created_at")[:20]
 
 
 def get_related_books(book, limit=8):
@@ -101,6 +104,10 @@ def filter_books(queryset, filters):
     publication_year = filters.get("publication_year")
     if publication_year:
         queryset = queryset.filter(publication_date__year=publication_year)
+
+    publisher = filters.get("publisher")
+    if publisher:
+        queryset = queryset.filter(publisher__slug=publisher)
 
     search = filters.get("search")
     if search:

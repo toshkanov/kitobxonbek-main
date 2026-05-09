@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useAuthStore } from "@/stores/auth";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
-import { User, Package, BookOpen, Heart, MapPin } from "lucide-react";
+import { User, Package, BookOpen, Heart, MapPin, Bell, Sparkles, BarChart3 } from "lucide-react";
 
 export default function ProfilePage() {
   const t = useTranslations("profile");
@@ -31,7 +31,13 @@ export default function ProfilePage() {
     { icon: Heart, label: t("wishlist"), href: "/wishlist" },
     { icon: BookOpen, label: t("library"), href: "/library" },
     { icon: MapPin, label: t("addresses"), href: "/addresses" },
+    { icon: Bell, label: t("notifications"), href: "/notifications" },
+    { icon: Sparkles, label: t("recommendations"), href: "/recommendations" },
   ];
+
+  if (user.role === "admin" || user.role === "staff") {
+    menuItems.push({ icon: BarChart3, label: t("adminStats"), href: "/admin/stats" });
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">

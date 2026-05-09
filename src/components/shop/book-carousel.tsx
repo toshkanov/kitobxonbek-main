@@ -35,14 +35,12 @@ export function BookCarousel({ books, title, subtitle, viewAllHref }: BookCarous
         </div>
         <div className="flex items-center gap-2">
           {viewAllHref && (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="hidden sm:inline-flex"
-              render={<Link href={viewAllHref} />}
+            <Link
+              href={viewAllHref}
+              className="hidden sm:inline-flex h-7 items-center gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               {t("viewAll")}
-            </Button>
+            </Link>
           )}
           <Button variant="outline" size="icon" onClick={() => scroll("left")} aria-label="Oldingi">
             <ChevronLeft className="size-4" />

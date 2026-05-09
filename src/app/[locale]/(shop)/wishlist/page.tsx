@@ -45,11 +45,11 @@ export default async function WishlistPage({
                     <Image src={item.book_image} alt={item.book_title} fill className="object-cover" />
                   </div>
                 )}
-                <div className="p-3">
-                  <h3 className="text-sm font-semibold line-clamp-2">{item.book_title}</h3>
-                  <p className="text-sm font-bold mt-1">{formatPrice(parseFloat(item.book_price), locale)} so'm</p>
-                </div>
-              </Link>
+                  <div className="p-3">
+                    <h3 className="text-sm font-semibold line-clamp-2">{item.book_title}</h3>
+                    <p className="text-sm font-bold mt-1">{formatPrice(parseFloat(item.book_price), locale)} so&apos;m</p>
+                  </div>
+                </Link>
               <div className="p-3 pt-0">
                 <Button size="sm" className="w-full">
                   <ShoppingBag className="size-4 mr-1" />

@@ -27,6 +27,9 @@ class RecommendationViewSet(viewsets.ViewSet):
 
     @action(detail=False, methods=["get"])
     def similar(self, request, book_slug=None):
+        # This action is routed as /recommendations/similar/ (detail=False),
+        # so the frontend passes the book slug as a query param: ?book_slug=...
+        book_slug = request.query_params.get("book_slug") or book_slug
         books = RecommendationService.get_similar_books(book_slug)
         return Response(BookListSerializer(books, many=True).data)
 

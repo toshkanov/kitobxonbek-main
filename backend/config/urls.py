@@ -29,6 +29,7 @@ urlpatterns = [
     path('api/v1/', include('apps.recommendations.urls')),
     path('api/v1/', include('apps.analytics.urls')),
     path('api/v1/', include('apps.common.urls')),
+    path('api/v1/', include('apps.subscriptions.urls')),
 ]
 
 # Media files serving in development

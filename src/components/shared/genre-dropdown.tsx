@@ -15,8 +15,14 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import { BookOpen, ChevronDown, Loader2 } from "lucide-react";
+import {
+  BookOpen, ChevronDown, Loader2, BookMarked, Sparkles, Heart,
+  Music, Film, Globe, Brain, FlaskConical, Swords, GraduationCap,
+  Palette, Ghost, Laugh, Cpu, Leaf, Users, Briefcase, Star,
+  Baby, TreePine, Zap, MessageSquare, Camera, Rocket, Shield,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { LucideIcon } from "lucide-react";
 import type { BackendGenre } from "@/lib/api/books";
 
 interface GenreDropdownProps {
@@ -24,11 +30,44 @@ interface GenreDropdownProps {
   isLoading: boolean;
 }
 
+const LUCIDE_GENRE_ICONS: Record<string, LucideIcon> = {
+  "book-open": BookOpen,
+  "book": BookOpen,
+  "book-marked": BookMarked,
+  "sparkles": Sparkles,
+  "heart": Heart,
+  "music": Music,
+  "film": Film,
+  "globe": Globe,
+  "brain": Brain,
+  "flask-conical": FlaskConical,
+  "swords": Swords,
+  "graduation-cap": GraduationCap,
+  "palette": Palette,
+  "ghost": Ghost,
+  "laugh": Laugh,
+  "cpu": Cpu,
+  "leaf": Leaf,
+  "users": Users,
+  "briefcase": Briefcase,
+  "star": Star,
+  "baby": Baby,
+  "tree-pine": TreePine,
+  "zap": Zap,
+  "message-square": MessageSquare,
+  "camera": Camera,
+  "rocket": Rocket,
+  "shield": Shield,
+};
+
 function GenreIcon({ icon }: { icon: string }) {
-  if (icon && icon.trim()) {
-    return <span className="text-base leading-none">{icon}</span>;
-  }
-  return <BookOpen className="size-4" />;
+  if (!icon?.trim()) return <BookOpen className="size-4" />;
+
+  const LucideIcon = LUCIDE_GENRE_ICONS[icon.toLowerCase()];
+  if (LucideIcon) return <LucideIcon className="size-4" />;
+
+  // emoji or unknown string — render as text
+  return <span className="text-base leading-none">{icon}</span>;
 }
 
 function hasChildren(genre: BackendGenre): boolean {

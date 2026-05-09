@@ -12,6 +12,15 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Monorepo / backend artifacts:
+    "backend/**",
+    "venv/**",
+    "**/.venv/**",
+    "**/__pycache__/**",
+    "**/site-packages/**",
+    "**/coverage/**",
+    "**/dist/**",
+    "**/node_modules/**",
   ]),
 ]);
 

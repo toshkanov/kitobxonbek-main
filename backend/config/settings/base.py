@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'apps.notifications.apps.NotificationsConfig',
     'apps.recommendations.apps.RecommendationsConfig',
     'apps.analytics.apps.AnalyticsConfig',
+    'apps.subscriptions.apps.SubscriptionsConfig',
 ]
 
 MIDDLEWARE = [
@@ -307,8 +308,8 @@ REST_FRAMEWORK['DEFAULT_THROTTLE_CLASSES'] = [
 ]
 
 REST_FRAMEWORK['DEFAULT_THROTTLE_RATES'] = {
-    'anon': '100/hour',
-    'user': '1000/hour',
-    'login': '5/minute',
-    'register': '3/hour',
+    'anon': '1000/hour',
+    'user': '5000/hour',
+    'login': '10/minute',
+    'register': '10/hour',
 }

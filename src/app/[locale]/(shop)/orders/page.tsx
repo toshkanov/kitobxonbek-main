@@ -70,7 +70,7 @@ export default async function OrdersPage({
                 ))}
               </div>
               <div className="flex justify-between items-center">
-                <span className="font-bold">{formatPrice(parseFloat(order.total_amount), locale)} so'm</span>
+                <span className="font-bold">{formatPrice(parseFloat(order.total_amount), locale)} so&apos;m</span>
                 <Link href={`/orders/${order.order_number}`}>
                   <Button variant="outline" size="sm">{t("details")}</Button>
                 </Link>

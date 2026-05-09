@@ -3,6 +3,7 @@ Development settings for Kitobxonbek project.
 Override base settings for local development.
 """
 
+import os
 from .base import *  # noqa
 
 # Security
@@ -33,7 +34,16 @@ MIDDLEWARE += [
 INTERNAL_IPS = ['127.0.0.1', 'localhost']
 
 # Email backend for development (console output)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# Use SMTP in development so OTP/verify emails can be delivered.
+# Credentials should be provided via env vars:
+#   EMAIL_HOST_USER, EMAIL_HOST_PASSWORD (for Gmail use an App Password)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = os.environ.get("EMAIL_HOST", "smtp.gmail.com")
+EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "587"))
+EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "True").lower() in ("1", "true", "yes")
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "sherzodakramov0932@gmail.com")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
+DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "sherzodakramov0932@gmail.com")
 
 # Cache: Use local memory cache for development
 CACHES = {

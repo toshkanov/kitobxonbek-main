@@ -128,24 +128,24 @@ export default function CheckoutPage() {
             {items.map((item) => (
               <div key={item.id} className="flex justify-between text-sm">
                 <span>{item.bookTitle} x{item.quantity}</span>
-                <span>{formatPrice(item.totalPrice, locale)} so'm</span>
+                <span>{formatPrice(item.totalPrice, locale)} so&apos;m</span>
               </div>
             ))}
           </div>
           <div className="border-t pt-4 space-y-2">
             <div className="flex justify-between">
               <span>{t("subtotal")}</span>
-              <span>{formatPrice(totalAmount, locale)} so'm</span>
+              <span>{formatPrice(totalAmount, locale)} so&apos;m</span>
             </div>
             {deliveryFee > 0 && (
               <div className="flex justify-between">
                 <span>{t("deliveryFee")}</span>
-                <span>{formatPrice(deliveryFee, locale)} so'm</span>
+                <span>{formatPrice(deliveryFee, locale)} so&apos;m</span>
               </div>
             )}
             <div className="flex justify-between text-lg font-bold">
               <span>{t("total")}</span>
-              <span>{formatPrice(total, locale)} so'm</span>
+              <span>{formatPrice(total, locale)} so&apos;m</span>
             </div>
           </div>
           <Button type="submit" className="w-full mt-4" size="lg" disabled={isSubmitting}>

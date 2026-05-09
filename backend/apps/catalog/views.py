@@ -39,6 +39,8 @@ from apps.common.permissions import IsAdminOrReadOnly
 
 
 class BookViewSet(viewsets.ReadOnlyModelViewSet):
+    lookup_field = "slug"
+    lookup_url_kwarg = "slug"
     serializer_class = BookListSerializer
     permission_classes = [AllowAny]
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
@@ -79,7 +81,7 @@ class BookViewSet(viewsets.ReadOnlyModelViewSet):
         serializer = BookListSerializer(books, many=True)
         return Response(serializer.data)
 
-    @action(detail=False, methods=["get"])
+    @action(detail=False, methods=["get"], url_path="new-arrivals")
     def new_arrivals(self, request):
         books = get_new_arrivals()
         serializer = BookListSerializer(books, many=True)
@@ -97,9 +99,12 @@ class BookViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class AuthorViewSet(viewsets.ReadOnlyModelViewSet):
+    lookup_field = "slug"
+    lookup_url_kwarg = "slug"
     queryset = Author.objects.all()
     permission_classes = [AllowAny]
     throttle_classes = [AnonRateThrottle]
+    pagination_class = None
 
     def get_queryset(self):
         return get_authors_queryset().order_by("full_name")
@@ -130,10 +135,13 @@ class GenreViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class PublisherViewSet(viewsets.ReadOnlyModelViewSet):
+    lookup_field = "slug"
+    lookup_url_kwarg = "slug"
     queryset = Publisher.objects.all()
     serializer_class = PublisherSerializer
     permission_classes = [AllowAny]
     throttle_classes = [AnonRateThrottle]
+    pagination_class = None
 
     def get_queryset(self):
         return get_publishers_queryset().order_by("name")
@@ -144,6 +152,7 @@ class BookCollectionViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = [AllowAny]
     throttle_classes = [AnonRateThrottle]
     lookup_field = "slug"
+    pagination_class = None
 
     def get_queryset(self):
         return get_collections_queryset()

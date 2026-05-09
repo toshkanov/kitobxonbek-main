@@ -48,7 +48,7 @@ export function BookCard({ book, className, priority }: BookCardProps) {
       <Link href={`/books/${book.slug}`} className="flex flex-col gap-3">
         <div className="bg-muted relative aspect-[2/3] overflow-hidden rounded-xl">
           <Image
-            src={book.coverImage}
+            src={book.coverImage || "/book-placeholder.svg"}
             alt={book.title}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"

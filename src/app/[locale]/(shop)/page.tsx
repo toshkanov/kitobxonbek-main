@@ -7,7 +7,7 @@ import { FeaturedAuthorsSection } from "@/components/shop/featured-authors";
 import { TestimonialsSection } from "@/components/shop/testimonials-section";
 import { NewsletterSection } from "@/components/shop/newsletter-section";
 import { fetchBestsellers, fetchNewArrivals } from "@/lib/api/books";
-import { mapBackendBook } from "@/lib/mappers";
+import { mapBackendBookList } from "@/lib/mappers";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 60;
@@ -21,16 +21,16 @@ export default async function HomePage({
   setRequestLocale(locale);
   const t = await getTranslations("home.sections");
 
-  let bestsellers: ReturnType<typeof mapBackendBook>[] = [];
-  let newArrivals: ReturnType<typeof mapBackendBook>[] = [];
+  let bestsellers: ReturnType<typeof mapBackendBookList>[] = [];
+  let newArrivals: ReturnType<typeof mapBackendBookList>[] = [];
 
   try {
     const [bestsellersData, newArrivalsData] = await Promise.all([
       fetchBestsellers(),
       fetchNewArrivals(),
     ]);
-    bestsellers = bestsellersData.map(mapBackendBook);
-    newArrivals = newArrivalsData.map(mapBackendBook);
+    bestsellers = bestsellersData.map(mapBackendBookList);
+    newArrivals = newArrivalsData.map(mapBackendBookList);
   } catch {
     // If API fails, render without books
   }

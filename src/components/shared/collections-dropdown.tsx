@@ -92,7 +92,7 @@ export function CollectionsDropdown({
           </div>
         ) : displayCollections.length === 0 ? (
           <div className="py-6 text-center text-sm text-muted-foreground">
-            To'plamlar topilmadi
+            To&apos;plamlar topilmadi
           </div>
         ) : (
           <DropdownMenuGroup>
@@ -135,7 +135,7 @@ export function CollectionsDropdown({
           className="text-primary"
         >
           <Layers className="size-4" />
-          <span>Barcha to'plamlar</span>
+          <span>Barcha to&apos;plamlar</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

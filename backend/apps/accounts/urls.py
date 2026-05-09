@@ -17,11 +17,16 @@ from apps.accounts.views import (
 )
 
 router = DefaultRouter()
-router.register(r"me", UserViewSet, basename="user-me")
 router.register(r"me/addresses", AddressViewSet, basename="user-addresses")
+
+me_view = UserViewSet.as_view({
+    "get": "retrieve",
+    "patch": "partial_update",
+})
 
 urlpatterns = [
     path("", include(router.urls)),
+    path("me/", me_view, name="user-me"),
     path("register/", RegisterView.as_view(), name="auth-register"),
     path("login/", LoginView.as_view(), name="auth-login"),
     path("logout/", LogoutView.as_view(), name="auth-logout"),

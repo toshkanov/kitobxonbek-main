@@ -24,7 +24,7 @@ export default async function AboutPage({
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
         <p className="text-lg text-muted-foreground">
-          Kitobxon — bu zamonaviy onlayn kitob do'koni. Bizning maqsadimiz — kitob o'qishni yanada qulay va qiziqarli qilish.
+          Kitobxon — bu zamonaviy onlayn kitob do&apos;koni. Bizning maqsadimiz — kitob o&apos;qishni yanada qulay va qiziqarli qilish.
         </p>
       </div>
 
@@ -40,7 +40,7 @@ export default async function AboutPage({
 
       <div className="text-center">
         <Link href="/books">
-          <Button size="lg">Kitoblarni ko'rish</Button>
+          <Button size="lg">Kitoblarni ko&apos;rish</Button>
         </Link>
       </div>
     </div>

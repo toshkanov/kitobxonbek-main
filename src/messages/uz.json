@@ -150,7 +150,10 @@
     "orders": "Buyurtmalar",
     "wishlist": "Sevimlilar",
     "library": "Kutubxona",
-    "addresses": "Manzillar"
+    "addresses": "Manzillar",
+    "notifications": "Bildirishnomalar",
+    "recommendations": "Tavsiyalar",
+    "adminStats": "Statistika"
   },
   "about": {
     "title": "Biz haqimizda"
@@ -159,6 +162,8 @@
     "title": "Kitoblar",
     "loading": "Yuklanmoqda...",
     "noResults": "Natijalar topilmadi",
+    "booksFound": "ta kitob topildi",
+    "noBooks": "Kitoblar topilmadi",
     "filters": "Filtrlar",
     "sort": "Saralash",
     "searchPlaceholder": "Kitob qidirish...",
@@ -197,5 +202,106 @@
     "browseBooks": "Kitoblarni ko'rish",
     "read": "O'qish",
     "download": "Yuklab olish"
+  },
+  "publishers": {
+    "title": "Nashriyotlar",
+    "books": "kitob",
+    "website": "Veb-sayt"
+  },
+  "addresses": {
+    "title": "Manzillar",
+    "add": "Yangi manzil",
+    "addTitle": "Yangi manzil",
+    "editTitle": "Manzilni tahrirlash",
+    "saved": "Saqlandi",
+    "deleted": "O'chirildi",
+    "empty": "Manzillar yo'q",
+    "fillRequired": "Majburiy maydonlarni to'ldiring",
+    "loginRequired": "Manzillarni ko'rish uchun tizimga kiring",
+    "login": "Kirish",
+    "defaultBadge": "Asosiy",
+    "apt": "kv",
+    "fields": {
+      "title": "Sarlavha",
+      "region": "Viloyat",
+      "district": "Tuman",
+      "street": "Ko'cha",
+      "house": "Uy",
+      "apartment": "Xonadon",
+      "postal": "Pochta indeksi",
+      "default": "Asosiy manzil"
+    }
+  },
+  "notifications": {
+    "title": "Bildirishnomalar",
+    "loginRequired": "Bildirishnomalarni ko'rish uchun tizimga kiring",
+    "login": "Kirish",
+    "unread": "{count} ta o'qilmagan",
+    "noUnread": "O'qilmagan xabar yo'q",
+    "markAllRead": "Barchasini o'qilgan qilish",
+    "allRead": "Barchasi o'qildi deb belgilandi",
+    "markRead": "O'qilgan qilish",
+    "new": "Yangi",
+    "empty": "Bildirishnomalar yo'q",
+    "noTitle": "Bildirishnoma",
+    "preferences": "Sozlamalar",
+    "prefsSaved": "Sozlamalar saqlandi",
+    "prefsHint": "Telegram chat ID o'zgartirish uchun maydonni tark eting (blur).",
+    "prefs": {
+      "emailOrders": "Email: buyurtmalar",
+      "emailPromos": "Email: aksiyalar",
+      "smsOrders": "SMS: buyurtmalar",
+      "push": "Push bildirishnomalar",
+      "telegram": "Telegram chat ID"
+    }
+  },
+  "recommendations": {
+    "title": "Tavsiyalar",
+    "subtitle": "Sizga mos kitoblar",
+    "reason": "Sabab: {reason}",
+    "empty": "Tavsiyalar topilmadi"
+  },
+  "adminStats": {
+    "title": "Admin statistika",
+    "subtitle": "Asosiy ko'rsatkichlar",
+    "loginRequired": "Statistikani ko'rish uchun tizimga kiring",
+    "login": "Kirish",
+    "forbidden": "Sizda bu sahifaga kirish huquqi yo'q",
+    "cards": {
+      "users": "Foydalanuvchilar",
+      "orders": "Buyurtmalar",
+      "revenue": "Daromad",
+      "books": "Kitoblar"
+    },
+    "sales": {
+      "title": "Sotuvlar",
+      "week": "Hafta",
+      "month": "Oy",
+      "year": "Yil",
+      "totalSales": "Sotuvlar soni",
+      "totalRevenue": "Jami daromad",
+      "avgOrder": "O'rtacha chek"
+    },
+    "topBooks": {
+      "title": "Top kitoblar",
+      "empty": "Natija yo'q",
+      "book": "Kitob",
+      "sold": "Sotilgan",
+      "views": "Ko'rishlar",
+      "revenue": "Daromad"
+    }
+  },
+  "payments": {
+    "title": "To'lov holati",
+    "loginRequired": "To'lov holatini ko'rish uchun tizimga kiring",
+    "login": "Kirish",
+    "paymentId": "To'lov ID: {id}",
+    "details": "Tafsilotlar",
+    "fields": {
+      "provider": "Provayder",
+      "status": "Holat",
+      "amount": "Summa",
+      "createdAt": "Yaratilgan"
+    }
   }
 }

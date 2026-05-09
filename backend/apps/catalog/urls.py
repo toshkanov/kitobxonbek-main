@@ -11,12 +11,15 @@ from apps.catalog.views import (
 )
 
 router = DefaultRouter()
-router.register(r"books", BookViewSet, basename="books")
-router.register(r"authors", AuthorViewSet, basename="authors")
-router.register(r"genres", GenreViewSet, basename="genres")
-router.register(r"publishers", PublisherViewSet, basename="publishers")
-router.register(r"collections", BookCollectionViewSet, basename="collections")
-router.register(r"search", SearchViewSet, basename="search")
+# Keep a stable URL namespace that matches the frontend client.
+# Django is mounted at /api/v1/, so these become:
+#   /api/v1/catalog/books/, /api/v1/catalog/authors/, ...
+router.register(r"catalog/books", BookViewSet, basename="catalog-books")
+router.register(r"catalog/authors", AuthorViewSet, basename="catalog-authors")
+router.register(r"catalog/genres", GenreViewSet, basename="catalog-genres")
+router.register(r"catalog/publishers", PublisherViewSet, basename="catalog-publishers")
+router.register(r"catalog/collections", BookCollectionViewSet, basename="catalog-collections")
+router.register(r"catalog/search", SearchViewSet, basename="catalog-search")
 
 urlpatterns = [
     path("", include(router.urls)),

@@ -150,7 +150,10 @@
     "orders": "Orders",
     "wishlist": "Wishlist",
     "library": "Library",
-    "addresses": "Addresses"
+    "addresses": "Addresses",
+    "notifications": "Notifications",
+    "recommendations": "Recommendations",
+    "adminStats": "Stats"
   },
   "about": {
     "title": "About Us"
@@ -159,6 +162,8 @@
     "title": "Books",
     "loading": "Loading...",
     "noResults": "No results found",
+    "booksFound": "books found",
+    "noBooks": "No books found",
     "filters": "Filters",
     "sort": "Sort",
     "searchPlaceholder": "Search books...",
@@ -197,5 +202,106 @@
     "browseBooks": "Browse books",
     "read": "Read",
     "download": "Download"
+  },
+  "publishers": {
+    "title": "Publishers",
+    "books": "books",
+    "website": "Website"
+  },
+  "addresses": {
+    "title": "Addresses",
+    "add": "Add address",
+    "addTitle": "Add address",
+    "editTitle": "Edit address",
+    "saved": "Saved",
+    "deleted": "Deleted",
+    "empty": "No addresses",
+    "fillRequired": "Please fill required fields",
+    "loginRequired": "Sign in to manage addresses",
+    "login": "Login",
+    "defaultBadge": "Default",
+    "apt": "apt",
+    "fields": {
+      "title": "Title",
+      "region": "Region",
+      "district": "District",
+      "street": "Street",
+      "house": "House",
+      "apartment": "Apartment",
+      "postal": "Postal code",
+      "default": "Default address"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "loginRequired": "Sign in to view notifications",
+    "login": "Login",
+    "unread": "{count} unread",
+    "noUnread": "No unread notifications",
+    "markAllRead": "Mark all as read",
+    "allRead": "All marked as read",
+    "markRead": "Mark as read",
+    "new": "New",
+    "empty": "No notifications",
+    "noTitle": "Notification",
+    "preferences": "Preferences",
+    "prefsSaved": "Preferences saved",
+    "prefsHint": "To change Telegram chat ID, edit the field and blur.",
+    "prefs": {
+      "emailOrders": "Email: orders",
+      "emailPromos": "Email: promotions",
+      "smsOrders": "SMS: orders",
+      "push": "Push notifications",
+      "telegram": "Telegram chat ID"
+    }
+  },
+  "recommendations": {
+    "title": "Recommendations",
+    "subtitle": "Books for you",
+    "reason": "Reason: {reason}",
+    "empty": "No recommendations found"
+  },
+  "adminStats": {
+    "title": "Admin stats",
+    "subtitle": "Store metrics",
+    "loginRequired": "Sign in to view stats",
+    "login": "Login",
+    "forbidden": "You don't have access to this page",
+    "cards": {
+      "users": "Users",
+      "orders": "Orders",
+      "revenue": "Revenue",
+      "books": "Books"
+    },
+    "sales": {
+      "title": "Sales",
+      "week": "Week",
+      "month": "Month",
+      "year": "Year",
+      "totalSales": "Total sales",
+      "totalRevenue": "Total revenue",
+      "avgOrder": "Average order"
+    },
+    "topBooks": {
+      "title": "Top books",
+      "empty": "No data",
+      "book": "Book",
+      "sold": "Sold",
+      "views": "Views",
+      "revenue": "Revenue"
+    }
+  },
+  "payments": {
+    "title": "Payment status",
+    "loginRequired": "Sign in to view payment status",
+    "login": "Login",
+    "paymentId": "Payment ID: {id}",
+    "details": "Details",
+    "fields": {
+      "provider": "Provider",
+      "status": "Status",
+      "amount": "Amount",
+      "createdAt": "Created"
+    }
   }
 }

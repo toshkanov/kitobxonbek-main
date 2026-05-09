@@ -150,7 +150,10 @@
     "orders": "Заказы",
     "wishlist": "Избранное",
     "library": "Библиотека",
-    "addresses": "Адреса"
+    "addresses": "Адреса",
+    "notifications": "Уведомления",
+    "recommendations": "Рекомендации",
+    "adminStats": "Статистика"
   },
   "about": {
     "title": "О нас"
@@ -159,6 +162,8 @@
     "title": "Книги",
     "loading": "Загрузка...",
     "noResults": "Результаты не найдены",
+    "booksFound": "книг найдено",
+    "noBooks": "Книги не найдены",
     "filters": "Фильтры",
     "sort": "Сортировка",
     "searchPlaceholder": "Поиск книги...",
@@ -197,5 +202,106 @@
     "browseBooks": "Смотреть книги",
     "read": "Читать",
     "download": "Скачать"
+  },
+  "publishers": {
+    "title": "Издательства",
+    "books": "книг",
+    "website": "Сайт"
+  },
+  "addresses": {
+    "title": "Адреса",
+    "add": "Добавить адрес",
+    "addTitle": "Добавить адрес",
+    "editTitle": "Редактировать адрес",
+    "saved": "Сохранено",
+    "deleted": "Удалено",
+    "empty": "Адресов нет",
+    "fillRequired": "Заполните обязательные поля",
+    "loginRequired": "Войдите, чтобы управлять адресами",
+    "login": "Войти",
+    "defaultBadge": "Основной",
+    "apt": "кв.",
+    "fields": {
+      "title": "Название",
+      "region": "Регион",
+      "district": "Район",
+      "street": "Улица",
+      "house": "Дом",
+      "apartment": "Квартира",
+      "postal": "Индекс",
+      "default": "Основной адрес"
+    }
+  },
+  "notifications": {
+    "title": "Уведомления",
+    "loginRequired": "Войдите, чтобы просматривать уведомления",
+    "login": "Войти",
+    "unread": "Непрочитанных: {count}",
+    "noUnread": "Непрочитанных нет",
+    "markAllRead": "Отметить все прочитанными",
+    "allRead": "Все отмечено как прочитанное",
+    "markRead": "Отметить прочитанным",
+    "new": "Новое",
+    "empty": "Уведомлений нет",
+    "noTitle": "Уведомление",
+    "preferences": "Настройки",
+    "prefsSaved": "Настройки сохранены",
+    "prefsHint": "Чтобы изменить Telegram chat ID, измените поле и уберите фокус.",
+    "prefs": {
+      "emailOrders": "Email: заказы",
+      "emailPromos": "Email: акции",
+      "smsOrders": "SMS: заказы",
+      "push": "Push-уведомления",
+      "telegram": "Telegram chat ID"
+    }
+  },
+  "recommendations": {
+    "title": "Рекомендации",
+    "subtitle": "Книги для вас",
+    "reason": "Причина: {reason}",
+    "empty": "Рекомендации не найдены"
+  },
+  "adminStats": {
+    "title": "Статистика (админ)",
+    "subtitle": "Показатели магазина",
+    "loginRequired": "Войдите, чтобы просматривать статистику",
+    "login": "Войти",
+    "forbidden": "У вас нет доступа к этой странице",
+    "cards": {
+      "users": "Пользователи",
+      "orders": "Заказы",
+      "revenue": "Доход",
+      "books": "Книги"
+    },
+    "sales": {
+      "title": "Продажи",
+      "week": "Неделя",
+      "month": "Месяц",
+      "year": "Год",
+      "totalSales": "Количество продаж",
+      "totalRevenue": "Общий доход",
+      "avgOrder": "Средний заказ"
+    },
+    "topBooks": {
+      "title": "Топ книг",
+      "empty": "Нет данных",
+      "book": "Книга",
+      "sold": "Продано",
+      "views": "Просмотры",
+      "revenue": "Доход"
+    }
+  },
+  "payments": {
+    "title": "Статус платежа",
+    "loginRequired": "Войдите, чтобы просмотреть статус платежа",
+    "login": "Войти",
+    "paymentId": "ID платежа: {id}",
+    "details": "Детали",
+    "fields": {
+      "provider": "Провайдер",
+      "status": "Статус",
+      "amount": "Сумма",
+      "createdAt": "Создано"
+    }
   }
 }

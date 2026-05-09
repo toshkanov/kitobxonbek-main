@@ -19,6 +19,7 @@ class UserLibraryViewSet(
 ):
     serializer_class = UserLibrarySerializer
     permission_classes = [IsAuthenticated]
+    pagination_class = None
 
     def get_queryset(self):
         return UserLibrary.objects.filter(user=self.request.user).select_related("book")

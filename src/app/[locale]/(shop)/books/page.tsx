@@ -1,6 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { fetchBooks } from "@/lib/api/books";
-import { mapBackendBook } from "@/lib/mappers";
+import { mapBackendBookList } from "@/lib/mappers";
 import { BookCard } from "@/components/shop/book-card";
 
 export const dynamic = "force-dynamic";
@@ -18,12 +18,12 @@ export default async function BooksPage({
   const t = await getTranslations("books");
 
   const sp = await searchParams;
-  let books: ReturnType<typeof mapBackendBook>[] = [];
+  let books: ReturnType<typeof mapBackendBookList>[] = [];
   let total = 0;
 
   try {
     const result = await fetchBooks(sp);
-    books = result.results.map(mapBackendBook);
+    books = result.results.map(mapBackendBookList);
     total = result.count;
   } catch {
     // If API fails, show empty

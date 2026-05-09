@@ -53,7 +53,7 @@ export default function CartPage() {
                   {item.bookTitle}
                 </Link>
                 <p className="text-sm text-muted-foreground">{item.format}</p>
-                <p className="font-bold mt-1">{formatPrice(item.price, locale)} so'm</p>
+                <p className="font-bold mt-1">{formatPrice(item.price, locale)} so&apos;m</p>
                 <div className="flex items-center gap-2 mt-2">
                   <Button
                     variant="outline"
@@ -93,13 +93,13 @@ export default function CartPage() {
           <div className="space-y-2 mb-4">
             <div className="flex justify-between">
               <span>{t("items")} ({totalItems})</span>
-              <span>{formatPrice(totalAmount, locale)} so'm</span>
+              <span>{formatPrice(totalAmount, locale)} so&apos;m</span>
             </div>
           </div>
           <div className="border-t pt-4">
             <div className="flex justify-between text-lg font-bold">
               <span>{t("total")}</span>
-              <span>{formatPrice(totalAmount, locale)} so'm</span>
+              <span>{formatPrice(totalAmount, locale)} so&apos;m</span>
             </div>
           </div>
           <Button className="w-full mt-4" size="lg" onClick={() => router.push("/checkout")}>

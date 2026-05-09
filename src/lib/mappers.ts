@@ -1,4 +1,4 @@
-import type { BackendBook, BackendAuthor, BackendGenre } from "@/lib/api/books";
+import type { BackendBook, BackendBookList, BackendAuthor, BackendGenre } from "@/lib/api/books";
 import type { Book, Author, Genre, BookFormatOption, BookFormat } from "@/types";
 
 export function mapBackendAuthor(author: BackendAuthor): Author {
@@ -87,5 +87,47 @@ export function mapBackendBook(book: BackendBook): Book {
     reviewCount: book.review_count,
     formats,
     defaultFormat: book.has_paperback ? "paperback" : formats[0]?.format || "paperback",
+  };
+}
+
+export function mapBackendBookList(book: BackendBookList): Book {
+  const formats: BookFormatOption[] = [];
+  const price = parseFloat(book.effective_price);
+
+  formats.push({
+    format: "paperback",
+    price,
+    stock: book.stock_quantity,
+    isAvailable: book.in_stock,
+  });
+
+  if (book.has_ebook) {
+    formats.push({ format: "ebook", price: price * 0.4, stock: 999, isAvailable: true });
+  }
+  if (book.has_audiobook) {
+    formats.push({ format: "audio", price: price * 0.6, stock: 999, isAvailable: true });
+  }
+
+  const coverImage = book.primary_image?.image || "";
+
+  return {
+    id: book.id,
+    slug: book.slug,
+    title: book.title,
+    shortDescription: book.short_description,
+    description: "",
+    coverImage,
+    images: coverImage ? [coverImage] : [],
+    authors: book.authors.map(mapBackendAuthor),
+    genres: [],
+    language: "uz",
+    isbn: "",
+    pageCount: undefined,
+    publishedAt: book.created_at,
+    publisher: undefined,
+    rating: parseFloat(book.average_rating),
+    reviewCount: book.review_count,
+    formats,
+    defaultFormat: "paperback",
   };
 }

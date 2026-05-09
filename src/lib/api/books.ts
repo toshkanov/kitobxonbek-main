@@ -64,6 +64,29 @@ export interface BackendBook {
   updated_at: string;
 }
 
+export interface BackendBookList {
+  id: string;
+  title: string;
+  slug: string;
+  short_description: string;
+  authors: BackendAuthor[];
+  primary_image: { id: string; image: string; is_primary: boolean; order: number } | null;
+  price: string;
+  discount_price: string | null;
+  discount_percentage: number | null;
+  effective_price: string;
+  stock_quantity: number;
+  in_stock: boolean;
+  average_rating: string;
+  review_count: number;
+  is_featured: boolean;
+  is_bestseller: boolean;
+  is_new: boolean;
+  has_ebook: boolean;
+  has_audiobook: boolean;
+  created_at: string;
+}
+
 export interface BackendCollection {
   id: string;
   title: string;
@@ -72,14 +95,23 @@ export interface BackendCollection {
   cover_image: string | null;
   is_featured: boolean;
   order: number;
-  books?: BackendBook[];
+  books?: BackendBookList[];
+}
+
+export interface BackendPublisher {
+  id: string;
+  name: string;
+  slug: string;
+  logo: string | null;
+  website: string | null;
+  book_count?: number;
 }
 
 export interface BooksResponse {
   count: number;
   next: string | null;
   previous: string | null;
-  results: BackendBook[];
+  results: BackendBookList[];
 }
 
 export async function fetchBooks(params?: Record<string, string>) {
@@ -94,32 +126,37 @@ export async function fetchBookBySlug(slug: string) {
 }
 
 export async function fetchBestsellers() {
-  const { data } = await api.get<BackendBook[]>("/catalog/books/bestsellers/");
+  const { data } = await api.get<BackendBookList[]>("/catalog/books/bestsellers/");
   return data;
 }
 
 export async function fetchNewArrivals() {
-  const { data } = await api.get<BackendBook[]>("/catalog/books/new-arrivals/");
+  const { data } = await api.get<BackendBookList[]>("/catalog/books/new-arrivals/");
   return data;
 }
 
 export async function fetchFeaturedBooks() {
-  const { data } = await api.get<BackendBook[]>("/catalog/books/featured/");
+  const { data } = await api.get<BackendBookList[]>("/catalog/books/featured/");
   return data;
 }
 
 export async function fetchRelatedBooks(slug: string) {
-  const { data } = await api.get<BackendBook[]>(`/catalog/books/${slug}/related/`);
+  const { data } = await api.get<BackendBookList[]>(`/catalog/books/${slug}/related/`);
   return data;
 }
 
 export async function fetchAuthors() {
-  const { data } = await api.get<BackendAuthor[]>("/catalog/authors/");
-  return data;
+  const { data } = await api.get<BackendAuthor[] | { results: BackendAuthor[] }>("/catalog/authors/");
+  return Array.isArray(data) ? data : data.results;
+}
+
+export interface BackendAuthorDetail extends BackendAuthor {
+  death_date: string | null;
+  books: BackendBookList[];
 }
 
 export async function fetchAuthorBySlug(slug: string) {
-  const { data } = await api.get<BackendAuthor>(`/catalog/authors/${slug}/`);
+  const { data } = await api.get<BackendAuthorDetail>(`/catalog/authors/${slug}/`);
   return data;
 }
 
@@ -129,12 +166,22 @@ export async function fetchGenres() {
 }
 
 export async function fetchCollections() {
-  const { data } = await api.get<BackendCollection[]>("/catalog/collections/");
-  return data;
+  const { data } = await api.get<BackendCollection[] | { results: BackendCollection[] }>("/catalog/collections/");
+  return Array.isArray(data) ? data : data.results;
 }
 
 export async function fetchCollectionBySlug(slug: string) {
   const { data } = await api.get<BackendCollection>(`/catalog/collections/${slug}/`);
+  return data;
+}
+
+export async function fetchPublishers() {
+  const { data } = await api.get<BackendPublisher[] | { results: BackendPublisher[] }>("/catalog/publishers/");
+  return Array.isArray(data) ? data : data.results;
+}
+
+export async function fetchPublisherBySlug(slug: string) {
+  const { data } = await api.get<BackendPublisher>(`/catalog/publishers/${slug}/`);
   return data;
 }
 

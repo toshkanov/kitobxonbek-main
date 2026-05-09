@@ -3,7 +3,13 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { AuthCard } from "@/components/shared/auth-card";
 
-export default function VerifyEmailPage() {
+export default async function VerifyEmailPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ email?: string }>;
+}) {
+  const sp = searchParams ? await searchParams : undefined;
+  const email = sp?.email ?? "sherzodakramov0932@gmail.com";
   return (
     <AuthCard title="Emailingizni tasdiqlang">
       <div className="flex flex-col items-center gap-4 text-center">
@@ -11,7 +17,7 @@ export default function VerifyEmailPage() {
           <Mail className="size-8" />
         </div>
         <p className="text-muted-foreground text-sm">
-          Sizning email manzilingizga tasdiqlash havolasi yuborildi. Iltimos, pochtangizni tekshiring va havolaga bosing.
+          Tasdiqlash kodi yuborildi: <span className="font-medium text-foreground">{email}</span>
         </p>
         <Button variant="outline" size="lg" className="w-full" render={<Link href="/login" />}>
           Kirishga qaytish

@@ -15,6 +15,7 @@ import {
   Users,
   Layers,
   Info,
+  Crown,
 } from "lucide-react";
 import { useCartStore } from "@/stores/cart";
 import { cn } from "@/lib/utils";
@@ -236,7 +237,7 @@ function CollectionsSection({ onClick }: { onClick?: () => void }) {
         className="flex items-center gap-2 px-3 py-2.5 text-sm text-foreground hover:bg-accent rounded-lg transition-colors"
       >
         <Layers className="size-4 text-muted-foreground" />
-        Barcha to'plamlar
+        Barcha to&apos;plamlar
       </Link>
     </MobileCollapsibleSection>
   );
@@ -345,6 +346,19 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           </div>
 
           <div className="pt-4 space-y-1">
+            <Link
+              href="/tilla"
+              onClick={handleClose}
+              className={cn(
+                "flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-colors",
+                pathname.startsWith("/tilla")
+                  ? "bg-amber-500 text-white"
+                  : "text-amber-500 hover:bg-amber-500/10"
+              )}
+            >
+              <Crown className="size-5 shrink-0" />
+              <span className="flex-1">Tilla obuna</span>
+            </Link>
             <MobileNavItem
               href="/about"
               icon={Info}

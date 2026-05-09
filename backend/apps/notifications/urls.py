@@ -5,8 +5,14 @@ from apps.notifications.views import NotificationViewSet, NotificationPreference
 
 router = DefaultRouter()
 router.register(r"notifications", NotificationViewSet, basename="notifications")
-router.register(r"notification-preferences", NotificationPreferenceViewSet, basename="notification-preferences")
+
+notification_preferences = NotificationPreferenceViewSet.as_view({
+    "get": "list",
+    "patch": "partial_update",
+})
 
 urlpatterns = [
+    # Collection-level endpoint (no pk) for preferences.
+    path("notification-preferences/", notification_preferences, name="notification-preferences"),
     path("", include(router.urls)),
 ]

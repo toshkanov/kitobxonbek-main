@@ -10,6 +10,10 @@ export const registerSchema = z
   .object({
     name: z.string().min(2, "Ism kamida 2 belgidan iborat bo'lishi kerak"),
     email: z.string().email("Email noto'g'ri formatda"),
+    phone: z
+      .string()
+      .min(9, "Telefon raqam noto'g'ri")
+      .regex(/^\+?[0-9]{9,13}$/, "Telefon raqam noto'g'ri formatda"),
     password: z.string().min(8, "Parol kamida 8 belgidan iborat bo'lishi kerak"),
     confirmPassword: z.string(),
   })

@@ -4,7 +4,6 @@ import { useTransition } from "react";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { toast } from "sonner";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -21,18 +20,24 @@ export default function RegisterPage() {
 
   const form = useForm<RegisterInput>({
     resolver: zodResolver(registerSchema),
-    defaultValues: { name: "", email: "", password: "", confirmPassword: "" },
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      password: "",
+      confirmPassword: "",
+    },
   });
 
   const onSubmit = (values: RegisterInput) => {
     startTransition(async () => {
       try {
-        const [firstName, lastName] = values.name.split(" ");
+        const [firstName, ...rest] = values.name.trim().split(" ");
         await register({
           email: values.email,
-          phone: "+998" + Math.random().toString().slice(2, 11),
+          phone: values.phone,
           first_name: firstName || values.name,
-          last_name: lastName || "",
+          last_name: rest.join(" ") || "",
           password: values.password,
           password_confirm: values.confirmPassword,
         });
@@ -68,6 +73,20 @@ export default function RegisterPage() {
           <Input id="email" type="email" autoComplete="email" {...form.register("email")} aria-invalid={!!form.formState.errors.email} />
           {form.formState.errors.email && (
             <p className="text-destructive text-xs">{form.formState.errors.email.message}</p>
+          )}
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="phone">Telefon raqam</Label>
+          <Input
+            id="phone"
+            type="tel"
+            autoComplete="tel"
+            placeholder="+998901234567"
+            {...form.register("phone")}
+            aria-invalid={!!form.formState.errors.phone}
+          />
+          {form.formState.errors.phone && (
+            <p className="text-destructive text-xs">{form.formState.errors.phone.message}</p>
           )}
         </div>
         <div className="space-y-1.5">
